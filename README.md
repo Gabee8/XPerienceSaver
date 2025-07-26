@@ -28,7 +28,7 @@ logo = selected logo (0 = XP, 1 = XP MCE, 2 = Vista, 3= Win7, 4 = Custom logo)
 
 time = animation time (second)
 
-Thanks for **Frank McCown**
+Thanks idea and basic code for **Frank McCown**
 
 https://sites.harding.edu/fmccown/screensaver/screensaver.html
 
