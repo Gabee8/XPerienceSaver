@@ -33,3 +33,8 @@ Screenshots:
 
 ![](http://tandemradio.hu/wp-content/uploads/Kepernyokep-2025-07-26-214935.png)
 ![vista](https://github.com/user-attachments/assets/78f195e4-c4be-44a4-8319-540d84b8e729)
+
+
+
+https://github.com/user-attachments/assets/d669edbe-0318-45c0-9b24-e708c3ecb6fb
+
