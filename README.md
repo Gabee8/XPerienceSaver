@@ -4,6 +4,10 @@
 
 Simple Windows Xp style screensaver for Windows 7,8,10,11. Written C# by Visual Studio 2010
 
+Installing:
+- Unpack the scr file and right click install menu.
+- or Unpack the scr file and copy C:\Windows\System32 folder.
+
 System Requiments .net framework 4.0 or newer.
 
 -------------
@@ -11,6 +15,17 @@ The program configure the screensaver settings menu:
 - Select 4 logo's (XP, XP Media Center, Vista, Windows 7)
 - Set custom logo
 - Set animation time
+
+Settings edit by registry:
+Go to:
+```reg
+HKEY_CURRENT_USER\Software\XP_ScreenSaver
+
+Reg string's:
+imagePath = custom path the logo
+logo = selected logo (0 = XP, 1 = XP MCE, 2 = Vista, 3= Win7, 4 = Custom logo)
+time = animation time (second)
+```
 
 Screenshots:
 ![](http://tandemradio.hu/wp-content/uploads/xpsaver.jpg)
