@@ -17,7 +17,7 @@ The program configure the screensaver settings menu:
 - Set animation time
 
 Settings edit by registry:
-Go to:
+
 ```reg
 HKEY_CURRENT_USER\Software\XP_ScreenSaver
 
