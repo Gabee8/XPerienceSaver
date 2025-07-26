@@ -1,0 +1,49 @@
+﻿<Window x:Class="XPerienceSaver.SettingsForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Settings" Height="278" Width="415" Icon="/XPerienceSaver;component/Images/IconGroup1.ico" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" ContentRendered="Window_ContentRendered">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140" />
+            <RowDefinition />
+            <RowDefinition Height="40"  />
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <Label Content="Selected image:" Height="28" HorizontalAlignment="Left" Name="label1" VerticalAlignment="Top" />
+            <RadioButton Margin="5" Content="Windows XP" Name="defaultCb" Checked="defaultCb_Checked" />
+            <RadioButton Margin="5" Content="Windows XP MCE" Name="mceCb" Checked="mceCb_Checked" />
+            <RadioButton Margin="5" Content="Windows Vista" Name="vistaCb" Checked="vistaCb_Checked" />
+            <RadioButton Margin="5" Content="Windows 7" Name="w7Cb" Checked="w7Cb_Checked" />
+        </StackPanel>
+
+        <Image Height="120" HorizontalAlignment="Right" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="200" Source="/XPerienceSaver;component/Images/xp.bmp" />
+        <StackPanel Grid.Row="1">
+            
+            <StackPanel Margin="5" Orientation="Horizontal" Height="24">
+                <RadioButton Content="Custom:" Margin="0,0,5,0" Name="customCb" Checked="customCb_Checked" />
+                <TextBox Name="CPicPath" Width="250"></TextBox>
+                <Button Content="Browse" Padding="5,0" Name="browseBt" Click="browseBt_Click" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" >
+                <Label Content="Animation time: (second)" />
+                <TextBox Width="32" Name="timeTxt" Text="5" />
+                <Button Content="Reset" Name="rstTime" Click="rstTime_Click" />
+            </StackPanel>
+            </StackPanel>
+        <Border x:Name="ButtonsArea" BorderThickness="0,1,0,0" Grid.Row="2"  Padding="9,6" Height="40" VerticalAlignment="Bottom">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFBFDFF" Offset="0.017" />
+                    <GradientStop Color="#FFDDE8F6" Offset="1" />
+                </LinearGradientBrush>
+            </Border.Background>
+            <DockPanel HorizontalAlignment="Right">
+                <StackPanel Orientation="Horizontal">
+                    <Button Margin="5,0" Content="Apply" MinWidth="64" Name="applyBt" Click="applyBt_Click" />
+                    <Button Margin="5,0" Content="Cancel" MinWidth="64" Name="cancelBt" Click="cancelBt_Click" />
+                </StackPanel>
+           
+            </DockPanel>
+        </Border>
+    </Grid>
+</Window>
