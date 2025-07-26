@@ -18,14 +18,13 @@ The program configure the screensaver settings menu:
 
 Settings edit by registry:
 
-```reg
-HKEY_CURRENT_USER\Software\XP_ScreenSaver
-
+```
+[HKEY_CURRENT_USER\Software\XP_ScreenSaver]
+```
 Reg string's:
 imagePath = custom path the logo
 logo = selected logo (0 = XP, 1 = XP MCE, 2 = Vista, 3= Win7, 4 = Custom logo)
 time = animation time (second)
-```
 
 Screenshots:
 ![](http://tandemradio.hu/wp-content/uploads/xpsaver.jpg)
