@@ -105,17 +105,10 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\xp.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\IconGroup1.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\mce.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\vista.bmp" />
-    <Resource Include="Images\w7.bmp" />
+    <Resource Include="Images\mce.png" />
+    <Resource Include="Images\vista.png" />
+    <Resource Include="Images\w7.png" />
+    <Resource Include="Images\xp.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -125,4 +118,5 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+
 </Project>
