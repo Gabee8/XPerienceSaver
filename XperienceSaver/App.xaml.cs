@@ -45,9 +45,10 @@ namespace XPerienceSaver
                     }
 
                     IntPtr previewWndHandle = new IntPtr(long.Parse(secondArgument));
-                    MainWindow main = new XPerienceSaver.MainWindow();
+
+                    MainWindow main = new XPerienceSaver.MainWindow(previewWndHandle);
                     main.Show();
-                    //Application.Run(new ScreenSaverForm(previewWndHandle));
+                    //Application.Run(new XPerienceSaver.MainWindow(previewWndHandle));
                 }
                 else if (firstArgument == "/s")      // Full-screen mode
                 {
@@ -71,9 +72,12 @@ namespace XPerienceSaver
 
         static void ShowScreenSaver()
         {
-
-            MainWindow main = new XPerienceSaver.MainWindow();
-            main.Show(); 
+            foreach (System.Windows.Forms.Screen screen in System.Windows.Forms.Screen.AllScreens)
+            {
+                MainWindow main = new XPerienceSaver.MainWindow(screen.Bounds);
+                main.Show(); 
+            }
+            
         }
 
        

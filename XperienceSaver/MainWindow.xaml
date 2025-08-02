@@ -4,7 +4,7 @@
         Title="Windows XP" Height="300" Width="300" ResizeMode="NoResize" Background="Black" UseLayoutRounding="True" WindowStyle="None" WindowState="Maximized" Name="screensaverFrm" MouseMove="screensaverFrm_MouseMove" Loaded="screensaverFrm_Loaded" ContentRendered="screensaverFrm_ContentRendered" KeyUp="screensaverFrm_KeyUp" MouseLeftButtonUp="screensaverFrm_MouseLeftButtonUp" MouseRightButtonUp="screensaverFrm_MouseRightButtonUp" Icon="/XperienceSaver;component/Images/IconGroup1.ico">
     <Grid>
         <Canvas Name="logoCanv">
-            <Image Name="logo" Source="/XPerienceSaver;component/Images/xp.bmp" Width="275" Height="174" />
+            <Image Name="logo" Source="/XPerienceSaver;component/Images/xp.bmp" MaxWidth="275" MaxHeight="174" />
         </Canvas>
         
     </Grid>
