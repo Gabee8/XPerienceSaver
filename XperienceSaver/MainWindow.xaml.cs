@@ -68,7 +68,7 @@ namespace XPerienceSaver
         private Random rand = new Random();
         DispatcherTimer dispatcherTimer = new DispatcherTimer();
         int time = 5;
-        string picture = "pack://application:,,,/XPerienceSaver;Component/Images/xp.bmp";
+        string picture = "pack://application:,,,/XPerienceSaver;Component/Images/xp.png";
         int selLogo = 0;
         IntPtr PHandle;
         int BoundsWidth = 0;
@@ -159,7 +159,7 @@ namespace XPerienceSaver
                     {
                         BitmapImage Img = new BitmapImage();
                         Img.BeginInit();
-                        Img.UriSource = new Uri("pack://application:,,,/XPerienceSaver;Component/Images/w7.bmp");
+                        Img.UriSource = new Uri("pack://application:,,,/XPerienceSaver;Component/Images/w7.png");
                         Img.EndInit();
                         logo.Source = Img;
                     }
@@ -167,7 +167,7 @@ namespace XPerienceSaver
                     {
                         BitmapImage Img = new BitmapImage();
                         Img.BeginInit();
-                        Img.UriSource = new Uri("pack://application:,,,/XPerienceSaver;Component/Images/vista.bmp");
+                        Img.UriSource = new Uri("pack://application:,,,/XPerienceSaver;Component/Images/vista.png");
                         Img.EndInit();
                         logo.Source = Img;
                     }
@@ -175,7 +175,7 @@ namespace XPerienceSaver
                     {
                         BitmapImage Img = new BitmapImage();
                         Img.BeginInit();
-                        Img.UriSource = new Uri("pack://application:,,,/XPerienceSaver;Component/Images/mce.bmp");
+                        Img.UriSource = new Uri("pack://application:,,,/XPerienceSaver;Component/Images/mce.png");
                         Img.EndInit();
                         logo.Source = Img;
                     }
@@ -183,7 +183,7 @@ namespace XPerienceSaver
                     {
                         BitmapImage Img = new BitmapImage();
                         Img.BeginInit();
-                        Img.UriSource = new Uri("pack://application:,,,/XPerienceSaver;Component/Images/xp.bmp");
+                        Img.UriSource = new Uri("pack://application:,,,/XPerienceSaver;Component/Images/xp.png");
                         Img.EndInit();
                         logo.Source = Img;
                     }
@@ -200,31 +200,48 @@ namespace XPerienceSaver
           
         }
 
+        System.Drawing.Point point;
         public void ExitScr()
         {
             if (loaded)
             {
                 if (!previewMode)
                 {
-                        if (mouseLocation != null)
-                        {
-                            if (Math.Abs(mouseLocation.X - GetMousePosition().X) > 5 ||
-                                Math.Abs(mouseLocation.Y - GetMousePosition().Y) > 5)
-                                this.Close();
-                        }
-                        mouseLocation = GetMousePosition();
-                    
+                    this.Close();
                 }
             }
         }
 
+
         private void screensaverFrm_MouseMove(object sender, MouseEventArgs e)
         {
-            ExitScr();
+            if (loaded)
+            {
+                if (!previewMode)
+                {
+
+                    if (mouseLocation != new Point(-1,-1))
+                    {
+
+                        if (Math.Abs(mouseLocation.X - e.GetPosition(this).X) > 5 ||
+                            Math.Abs(mouseLocation.Y - e.GetPosition(this).Y) > 5)
+                        {
+
+                            this.Close();
+                        }
+
+
+                    }
+
+                    mouseLocation = e.GetPosition(this);
+                }
+            }
+           
         }
 
         private void screensaverFrm_Loaded(object sender, RoutedEventArgs e)
         {
+            mouseLocation = new Point(-1, -1);
             LoadSettings();
             dispatcherTimer.Tick += moveTimer_Tick;
             dispatcherTimer.Interval = new TimeSpan(0, 0, 0, time, 0);
